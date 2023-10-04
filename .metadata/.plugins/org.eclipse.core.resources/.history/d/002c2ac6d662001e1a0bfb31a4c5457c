@@ -1,0 +1,42 @@
+package project;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class Logout extends HttpServlet{
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // Get the cookies from the request
+        Cookie[] cookies = request.getCookies();
+
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("user")) {
+                    // Remove a specific attribute by setting it to an empty string and reducing the max age
+                    cookie.setValue(""); // Set the value to an empty string
+                    cookie.setMaxAge(0);  // Set the maximum age to 0 (expires immediately)
+
+                    // Add the modified cookie to the response to effectively remove it
+                    response.addCookie(cookie);
+
+                    // Optionally, you can also remove the cookie from your local data structures
+                    // if you need to keep track of cookies on the server-side.
+                }
+            }
+        }
+
+        // Redirect or respond as needed
+        response.sendRedirect("/Login.jsp");
+    }
+}
+
+
+
+
+
+
+
+

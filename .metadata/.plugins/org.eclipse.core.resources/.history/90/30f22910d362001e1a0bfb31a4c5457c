@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<jsp:include page="nav.html" />
+
+  <!-- poster... -->
+
+  <section class="poster">
+
+    <div id="poster1div">
+      <div id="poster2div">
+        <p style="font-family: 'Raleway'; word-spacing: 3px;">inspiration, innovation & Dictionary</p>
+        <h1 class="ml2">
+
+          Power’s not given to you. You have to take it. Beyoncé Knowle
+
+        
+        </h1>
+
+        <p style="font-family: 'Raleway';word-spacing: 3px;">Dream is not something that you see while sleeping. It is
+          something that does not let you sleep</p>
+
+        <a href="#resister"><button type="button">Join Now</button></a>
+      </div>
+
+    </div>
+
+  </section>
+  
+  
+    <!-- <script src="imakewebthings-waypoints-latest-0-g34d9f6d/imakewebthings-waypoints-34d9f6d/src/waypoint.js"></script> -->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <script>
+        new WOW().init();
+      </script>
+  
+   <script src="static/back-nd.js"></script>
+</body>
+</html>

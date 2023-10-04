@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+
+
+/* Login.html */
+.login_form {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .login_form form {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+  }
+  
+  .login_form form input {
+    width: 70%;
+    height: 1.1cm;
+    margin-bottom: 26px;
+  }
+  
+  .login_form form .row {
+    width: 70%;
+  }
+  
+  .login_form form .login_btn {
+    background: #263238;
+    color:white;
+    border: none;
+    outline: none;
+  }
+  
+  .login_form h1 {
+    font-weight: 100;
+  }
+  
+  html,body{ scroll-behavior: smooth}
+
+/* Nav Start... */
+
+nav {
+  float: right;
+ 
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 60px;
+  background: #ffffff;
+  color: #463f3f;   
+  text-decoration: none;
+  /*
+  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+  */
+}
+nav ul li a:hover {
+  /* background: #f2f2f2; */
+  color: #b94400;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+} 
+nav ul li ul li a:hover{
+background-color: rgba(10, 10, 10, 0.479);
+color: white;
+transition-duration: 1s;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 1;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 60px;
+  width: 70px;
+}
+  

@@ -1,0 +1,14 @@
+127.0.0.1 - - [05/Oct/2023:01:05:15 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:21 +0530] "GET /project/WEB-INF/classes/project/Logout.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:25 +0530] "GET /project/WEB-INF/classes/project/Logout.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/Userdash.jsp HTTP/1.1" 200 4758
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/all.min.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/mobileScreen.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/back-nd.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/fontawesome-free-6.0.0-beta3-web/fontawesome-free-6.0.0-beta3-web/css/all.min.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/image/post4%20(1).jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:30 +0530] "GET /project/static/fontawesome-free-6.0.0-beta3-web/fontawesome-free-6.0.0-beta3-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:31 +0530] "GET /project/Userdash.jsp HTTP/1.1" 200 4758
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:01:05:33 +0530] "GET /project/logout_servlet HTTP/1.1" 404 777

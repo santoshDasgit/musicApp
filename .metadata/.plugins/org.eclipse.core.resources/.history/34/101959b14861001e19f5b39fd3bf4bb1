@@ -1,0 +1,80 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+ <link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link >
+</head>
+<body>
+<h1>Login</h1>
+    <form action="LoginServlet" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <a href="register.jsp">Don't have an account? Register</a>
+    
+        <%
+        // Get the ServletContext object
+        javax.servlet.ServletContext context = getServletContext();
+
+        // Retrieve the initialization parameter by its name
+        String dburl = context.getInitParameter("dburl");
+        String dbuser = context.getInitParameter("dbuser");
+        String dbpass = context.getInitParameter("dbpass");
+        %>
+ 
+    
+    
+    <%
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection con = DriverManager.getConnection(dburl, dbuser, dbpass);
+	PreparedStatement ps = con.prepareStatement("select * from student2");
+	ResultSet rs = ps.executeQuery();
+	%>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">id</th>
+				<th scope="col">email</th>
+				<th scope="col">name</th>
+				<th scope="col">age</th>
+				<th scope="col">phone</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+			while (rs.next()) {
+			%>
+			<tr>
+				<th scope="row"><%= rs.getInt(1) %></th>
+				<td><%= rs.getString("email") %></td>
+				<td><%= rs.getString("name") %></td>
+				<td><%= rs.getInt("age") %></td>
+				<td><%= rs.getLong("phone") %></td>
+				<td
+				><a href="delete.jsp?id=<%= rs.getInt(1) %>" class="btn btn-sm btn-danger">Delete</a>
+				 <a href="edit.jsp?id=<%= rs.getInt(1) %>" class="btn btn-sm btn-primary">Edit</a>
+				 </td>
+			</tr>
+			'
+			<%
+			}
+			%>
+		</tbody>
+	</table>
+	<%
+
+	%>
+</body>
+</html>

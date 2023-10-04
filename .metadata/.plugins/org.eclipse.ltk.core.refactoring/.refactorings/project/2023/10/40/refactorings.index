@@ -1,0 +1,22 @@
+1696261767212	Move 'index.jsp' to 'WEB-INF'
+1696261920937	Move 'index.jsp' to 'webapp'
+1696262223926	Move 'LoginFile.jsp' to 'webapp'
+1696262239497	Move 'mysql-connector-j-8.0.33.jar' to 'lib'
+1696263055896	Rename resource 'LoginFile.jsp'
+1696263399891	Move 'style.css' to 'static'
+1696263415315	Move 'style.css' to 'css'
+1696263765559	Move 'web.xml' to 'lib'
+1696263769767	Move 'web.xml' to 'WEB-INF'
+1696264712130	Delete element
+1696311158961	Delete element
+1696311497515	Move 'style.css' to 'static'
+1696311537772	Move 'style.css' to 'css'
+1696311622695	Move 'style2.css' to 'static'
+1696311630365	Delete element
+1696311653743	Rename resource 'style2.css'
+1696431518844	Delete element
+1696435301759	Rename resource 'Userdash.html'
+1696435347866	Delete element
+1696435489205	Move file
+1696435604813	Move file
+1696445573737	Delete element

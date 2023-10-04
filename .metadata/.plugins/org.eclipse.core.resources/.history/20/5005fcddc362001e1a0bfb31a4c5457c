@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%@ page import="javax.servlet.http.Cookie"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome to the Music Web App</h1>
+	<a href="Login.jsp">Login</a>
+	<jsp:forward page="Login.jsp" />
+
+	<%
+	Cookie[] cookies = request.getCookies();
+
+	boolean loggedIn = false;
+
+	if (cookies != null) {
+		for (Cookie cookie : cookies) {
+			if (cookie.getName().equals("admin@gmail.com")) {
+		loggedIn = true;
+		break;
+			}
+		}
+	}
+
+	if (!loggedIn) {
+		// Redirect to the login page if not logged in
+		response.sendRedirect("login.jsp");
+	}
+	%>
+</body>
+</html>

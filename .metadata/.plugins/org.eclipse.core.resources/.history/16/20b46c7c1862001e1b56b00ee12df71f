@@ -1,0 +1,57 @@
+package project;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/user_reg_servlet")
+public class user_register extends HttpServlet {
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+
+//	user detail get from register.html 
+		String uname = req.getParameter("uname");
+		String uemail = req.getParameter("uemail");
+		String upass = req.getParameter("upass");
+		String upass2 = req.getParameter("upass2");
+		String uph = req.getParameter("uph");
+		
+		javax.servlet.ServletContext context = getServletContext();
+		
+
+		// Retrieve the initialization database parameter by its name
+		String dburl = context.getInitParameter("dburl");
+		String dbuser = context.getInitParameter("dbuser");
+		String dbpass = context.getInitParameter("dbpass");
+
+		// Database connection and insertion
+		try {
+			String url = dburl;
+			String user = dbuser;
+			String password = dbpass'
+			Connection conn = DriverManager.getConnection(url, user, password);
+
+			String sql = "INSERT INTO user_data (username, email) VALUES (?, ?)";
+			PreparedStatement statement = conn.prepareStatement(sql);
+			statement.setString(1, username);
+			statement.setString(2, email);
+			statement.executeUpdate();
+
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		// Redirect back to a confirmation page or another page
+		response.sendRedirect("confirmation.html");
+
+	}
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\dsant\OneDrive\Desktop\snigdha\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2964957879.index
+3581163120.index
+3182284288.index
+1830947915.index
+3277586907.index
+804517902.index
